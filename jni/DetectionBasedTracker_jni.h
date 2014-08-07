@@ -25,30 +25,6 @@ JNIEXPORT void JNICALL Java_org_opencv_samples_facedetect_DetectionBasedTracker_
 
 /*
  * Class:     org_opencv_samples_fd_DetectionBasedTracker
- * Method:    nativeStart
- * Signature: (J)V
- */
-JNIEXPORT void JNICALL Java_org_opencv_samples_facedetect_DetectionBasedTracker_nativeStart
-  (JNIEnv *, jclass, jlong);
-
-/*
- * Class:     org_opencv_samples_fd_DetectionBasedTracker
- * Method:    nativeStop
- * Signature: (J)V
- */
-JNIEXPORT void JNICALL Java_org_opencv_samples_facedetect_DetectionBasedTracker_nativeStop
-  (JNIEnv *, jclass, jlong);
-
-  /*
-   * Class:     org_opencv_samples_fd_DetectionBasedTracker
-   * Method:    nativeSetFaceSize
-   * Signature: (JI)V
-   */
-  JNIEXPORT void JNICALL Java_org_opencv_samples_facedetect_DetectionBasedTracker_nativeSetFaceSize
-  (JNIEnv *, jclass, jlong, jint);
-
-/*
- * Class:     org_opencv_samples_fd_DetectionBasedTracker
  * Method:    nativeDetect
  * Signature: (JJJ)V
  */

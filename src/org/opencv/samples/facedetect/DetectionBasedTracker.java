@@ -1,24 +1,11 @@
 package org.opencv.samples.facedetect;
 
 import org.opencv.core.Mat;
-import org.opencv.core.MatOfRect;
 
 public class DetectionBasedTracker
 {
     public DetectionBasedTracker(String conName, String triName, String ftName, int minFaceSize) {
         mNativeObj = nativeCreateObject(triName, conName, ftName, minFaceSize);
-    }
-
-    public void start() {
-        nativeStart(mNativeObj);
-    }
-
-    public void stop() {
-        nativeStop(mNativeObj);
-    }
-
-    public void setMinFaceSize(int size) {
-        nativeSetFaceSize(mNativeObj, size);
     }
 
     public void detect(Mat imageGray, Mat faces) {
@@ -34,8 +21,5 @@ public class DetectionBasedTracker
 
     private static native long nativeCreateObject(String triName, String conName, String ftFile, int minFaceSize);
     private static native void nativeDestroyObject(long thiz);
-    private static native void nativeStart(long thiz);
-    private static native void nativeStop(long thiz);
-    private static native void nativeSetFaceSize(long thiz, int size);
     private static native void nativeDetect(long thiz, long inputImage, long faces);
 }

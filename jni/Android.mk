@@ -8,14 +8,14 @@ include $(CLEAR_VARS)
 include /home/nd/and_cv/OpenCV-android-sdk/sdk/native/jni/OpenCV.mk
 
 LOCAL_SRC_FILES  := DetectionBasedTracker_jni.cpp \
-	src/lib/IO.cc\
-	src/lib/PDM.cc\
-	src/lib/Patch.cc\
-	src/lib/CLM.cc\
-	src/lib/FDet.cc\
-	src/lib/PAW.cc\
-	src/lib/FCheck.cc\
-	src/lib/Tracker.cc
+	src/IO.cc\
+	src/PDM.cc\
+	src/Patch.cc\
+	src/CLM.cc\
+	src/FDet.cc\
+	src/PAW.cc\
+	src/FCheck.cc\
+	src/Tracker.cc
 LOCAL_C_INCLUDES += $(LOCAL_PATH)
 LOCAL_LDLIBS     += -llog -ldl
 
