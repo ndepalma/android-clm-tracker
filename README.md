@@ -26,6 +26,12 @@ These instructions have been tested on Ubuntu 12.04 Linux. I suspect it will wor
 8. Clean and rebuild your eclipse project. There shouldn't be any errors at this point. 
 9. Deploy to an attached phone.
 
+---
+Errata: 
+
+* Some people have had trouble building the APK. If this is the case, go to your project android build properties and uncheck "Is library". You'll know it because you'll think to yourself "This must refer to OpenCV being a library. Geez, this is a big misunderstanding!"
+* If it keeps asking you to install OpenCV Manager and you have - make sure your tablet has the NEON extensions. Find your tablet online and look up the processor. Android apparently lets you install native libraries that aren't for your processor. So make sure that when you install OpenCV and you build your jni (in the android.mk), you are targetting the right processor for your tablet. I have assumed an ARM processor with the NEON (ARMs SIMD Co-processor) extensions.
+---
 Major credit for this project goes primarily to [Jason Saragih](http://jsaragih.org/) for the original algorithm and code, [Kyle McDonald](http://kylemcdonald.net/) for maintaining the C++ code and mediating the different FaceTracker spin-off projects, and to the [OpenCV](http://opencv.org/) team who originally ported OpenCV to Android. This project is meant to be a proof of concept and, as such, can be extended to your project as needed.
 
 `android-clm-tracker` was forked and modified from the original c++ source at  [Kyle McDonald's FaceTracker github.](https://github.com/kylemcdonald/FaceTracker)
